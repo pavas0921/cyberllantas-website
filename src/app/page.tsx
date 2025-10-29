@@ -1,3 +1,4 @@
+import Navbar from "./components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
@@ -9,6 +10,8 @@ import {
   Phone,
   Mail,
   MapPin,
+  Menu,
+  X,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -46,52 +49,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-foreground">
       {/* Header/Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-primary/20 bg-black/80 backdrop-blur-md">
-        <nav className="container mx-auto flex items-center justify-between px-4 py-4">
-          <div className="flex items-center gap-3">
-            <Image
-              src="/og-image.png"
-              alt="Repuestos para motos de alta velocidad de Cyberllantas"
-              width={50}
-              height={50}
-              className="rounded-lg"
-              priority
-            />
-            <span className="text-2xl font-bold tracking-wider glow-cyan">
-              CYBERLLANTAS
-            </span>
-          </div>
-          <div className="hidden md:flex items-center gap-8">
-            <a
-              href="#productos"
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              Productos
-            </a>
-            <a
-              href="#servicios"
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              Servicios
-            </a>
-            <a
-              href="#marcas"
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              Marcas
-            </a>
-            <a
-              href="#contacto"
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              Contacto
-            </a>
-          </div>
-          <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
-            Cotizar Ahora
-          </Button>
-        </nav>
-      </header>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">
