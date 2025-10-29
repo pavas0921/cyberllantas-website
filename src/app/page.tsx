@@ -213,32 +213,32 @@ export default function Home() {
               {
                 name: "Llantas y Neumáticos",
                 desc: "Todas las medidas y marcas",
-                img: "motorcycle tire on dark background",
+                img: "/llantas.png",
               },
               {
                 name: "Frenos y Discos",
                 desc: "Máxima seguridad y rendimiento",
-                img: "motorcycle brake disc",
+                img: "/frenos.png",
               },
               {
                 name: "Cadenas y Piñones",
                 desc: "Transmisión perfecta",
-                img: "motorcycle chain and sprocket",
+                img: "/cadenas.png",
               },
               {
                 name: "Filtros y Aceites",
                 desc: "Mantenimiento premium",
-                img: "motorcycle oil filter",
+                img: "/aceites.png",
               },
               {
                 name: "Suspensión",
                 desc: "Amortiguadores y horquillas",
-                img: "motorcycle suspension",
+                img: "/suspension.png",
               },
               {
                 name: "Accesorios",
                 desc: "Todo lo que necesitas",
-                img: "motorcycle accessories",
+                img: "/frenos.png",
               },
             ].map((product, i) => (
               <Card
@@ -247,10 +247,10 @@ export default function Home() {
               >
                 <div className="aspect-video bg-muted/20 relative overflow-hidden">
                   <Image
-                    src="/og-image.png"
+                    src={product.img}
                     alt={product.name}
                     width={400}
-                    height={300}
+                    height={50}
                     className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
